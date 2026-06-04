@@ -9,7 +9,8 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #0f0f0f 0%, #1a0505 40%, #2d0a0a 70%, #4a0e0e 100%);
+            /* تدرج لوني متطور للخلفية يدمج الأزرق الداكن مع الأحمر الداكن */
+            background: linear-gradient(135deg, #040b16 0%, #0d2347 40%, #2d0a0a 70%, #4a0e0e 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -17,70 +18,73 @@
             padding: 20px;
         }
         .card {
-            background: linear-gradient(180deg, #faf6f1 0%, #f5efe6 100%);
+            background: linear-gradient(180deg, #f4f7fb 0%, #e9edf5 100%);
             max-width: 480px;
             width: 100%;
             padding: 40px 30px;
             border-radius: 30px;
-            box-shadow: 0 25px 70px rgba(0,0,0,0.55), 0 0 0 1px rgba(139,0,0,0.08);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.55), 0 0 0 1px rgba(0, 78, 146, 0.08);
             text-align: center;
-            border: 1px solid rgba(139,0,0,0.12);
+            border: 1px solid rgba(0, 78, 146, 0.12);
         }
         .logo {
-            font-size: 60px;
-            background: linear-gradient(135deg, #8B0000 0%, #A52A2A 100%);
+            font-size: 50px;
+            /* تدرج اللوجو من الأزرق إلى الأحمر الداكن */
+            background: linear-gradient(135deg, #004e92 0%, #8B0000 100%);
             width: 90px;
             height: 90px;
             line-height: 90px;
             border-radius: 50%;
             margin: 0 auto 15px;
             color: #fff;
-            box-shadow: 0 8px 25px rgba(139,0,0,0.35);
+            box-shadow: 0 8px 25px rgba(0, 78, 146, 0.35);
         }
-        h1 { font-size: 28px; color: #4a0e0e; margin-bottom: 5px; }
-        .sub { color: #6b4e4e; font-size: 14px; margin-bottom: 25px; }
+        h1 { font-size: 28px; color: #1a2238; margin-bottom: 5px; }
+        .sub { color: #4a5568; font-size: 14px; margin-bottom: 25px; }
         .btn {
-            background: linear-gradient(135deg, #8B0000 0%, #6b0000 100%);
+            /* تدرج الزر من الأزرق إلى الأحمر الداكن */
+            background: linear-gradient(135deg, #004e92 0%, #8B0000 100%);
             color: white; border: none; width: 100%;
             padding: 18px; font-size: 20px; border-radius: 15px;
             cursor: pointer; font-family: 'Cairo', sans-serif;
             font-weight: 700; transition: all 0.3s;
-            box-shadow: 0 10px 30px rgba(139,0,0,0.4);
+            box-shadow: 0 10px 30px rgba(0, 78, 146, 0.4);
         }
         .btn:hover { 
-            background: linear-gradient(135deg, #A52A2A 0%, #8B0000 100%);
+            /* عكس التدرج عند تمرير الماوس */
+            background: linear-gradient(135deg, #8B0000 0%, #004e92 100%);
             transform: scale(1.02); 
-            box-shadow: 0 12px 35px rgba(139,0,0,0.5);
+            box-shadow: 0 12px 35px rgba(139, 0, 0, 0.4);
         }
         .btn:disabled { 
-            background: #a08080; 
+            background: #8c94a1; 
             transform: none; 
             cursor: not-allowed; 
             box-shadow: none;
         }
-        #info { margin-top: 15px; font-size: 15px; color: #4a0e0e; line-height: 1.7; }
+        #info { margin-top: 15px; font-size: 15px; color: #1a2238; line-height: 1.7; }
         .loader {
             display: none; width: 35px; height: 35px;
-            margin: 15px auto 0; border: 4px solid #e8ddd5;
-            border-top: 4px solid #8B0000; border-radius: 50%;
+            margin: 15px auto 0; border: 4px solid #d5e1e8;
+            border-top: 4px solid #004e92; border-radius: 50%;
             animation: spin 1s linear infinite;
         }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .footer { margin-top: 25px; font-size: 12px; color: #8a6a6a; }
+        .footer { margin-top: 25px; font-size: 12px; color: #6a7a8a; }
         .badge {
-            display: inline-block; background: linear-gradient(135deg, #f5efe6 0%, #ede3d6 100%);
+            display: inline-block; background: linear-gradient(135deg, #e9edf5 0%, #dbe2ec 100%);
             padding: 5px 15px; border-radius: 20px;
-            font-size: 13px; color: #8B0000; margin-top: 12px;
-            border: 1px solid rgba(139,0,0,0.15);
+            font-size: 13px; color: #004e92; margin-top: 12px;
+            border: 1px solid rgba(0, 78, 146, 0.15);
         }
         .warn { color: #b35900; }
-        .ok { color: #6b8e23; }
-        .debug { font-size: 11px; color: #9a7a7a; margin-top: 8px; word-break: break-all; }
+        .ok { color: #2e8b57; }
+        .debug { font-size: 11px; color: #7a8a9a; margin-top: 8px; word-break: break-all; }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="logo">🛒</div>
+        <div class="logo">🌊</div>
         <h1>مشروع مياه قرية عميقة</h1>
         <p class="sub">لإدخال فواتير استهلاك مياه قرية عميقة بشكل متطور جدا جدا</p>
         <p class="sub">برمجة وتطوير وتصميم قصي المليكي 778010546</p>
@@ -105,8 +109,6 @@
             var debugParts = [];
 
             // ── الطريقة 0: navigator.platform (الأكثر موثوقية!) ──
-            // Chrome 64-bit Android: "Linux armv8l" أو "Linux aarch64"
-            // Chrome 32-bit Android: "Linux armv7l"
             if (platform) {
                 debugParts.push('platform=' + navigator.platform);
                 if (platform.indexOf('armv8') !== -1 || platform.indexOf('aarch64') !== -1) {
@@ -152,7 +154,7 @@
                 var m = modelMatch[1].toLowerCase();
                 debugParts.push('model=' + m);
 
-                // Samsung 64-bit (S8 فما فوق، Note8 فما فوق، A50s فما فوق...)
+                // Samsung 64-bit
                 var samsung64 = /sm-g95|sm-g96|sm-g97|sm-g98|sm-g99|sm-n95|sm-n96|sm-n97|sm-n98|sm-f90|sm-f91|sm-a73|sm-a53|sm-a54|sm-a34|sm-s90|sm-m54|sm-m34|sm-m14/;
                 // Xiaomi / Redmi / Poco 64-bit
                 var xiaomi64 = /mi 9|mi 10|mi 11|mi 12|mi 13|redmi note 9|redmi note 1[0-9]|redmi 1[0-9]|poco f[2-9]|poco x[3-9]|poco m[3-9]/;
@@ -172,7 +174,6 @@
                 var v = parseInt(androidVer[1]);
                 debugParts.push('android=' + v);
                 if (v >= 12) {
-                    // Android 12+ يتطلب 64-bit تقريباً للأجهزة الجديدة
                     return { apk: 'arm64-v8a', name: '64 بت', method: 'Android 12+', debug: debugParts };
                 }
             }
@@ -182,7 +183,7 @@
                 apk: 'armeabi-v7a', 
                 name: '32 بت (عام)', 
                 method: 'افتراضي آمن',
-                note: 'النسخة 32 بتن تعمل على جميع الأجهزة بما فيها 64 بت',
+                note: 'النسخة 32 بت تعمل على جميع الأجهزة بما فيها 64 بت',
                 debug: debugParts
             };
         }
@@ -222,7 +223,8 @@
                 btn.disabled = false;
                 btn.textContent = '📲 تحميل التطبيق الآن';
                 loader.style.display = 'none';
-                info.innerHTML += '<br><br>إذا لم يبدأ: <a href="' + url + '" style="color:#8B0000;font-weight:bold;">اضغط هنا</a>';
+                // تم تعديل لون الرابط ليتماشى مع اللون الأزرق الجديد
+                info.innerHTML += '<br><br>إذا لم يبدأ: <a href="' + url + '" style="color:#004e92;font-weight:bold;">اضغط هنا</a>';
             }, 1500);
         });
     </script>
